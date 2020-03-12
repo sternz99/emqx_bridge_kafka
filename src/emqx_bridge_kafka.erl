@@ -167,7 +167,7 @@ on_message_publish(Message, _Env) ->
             %% ,{ts,emqx_time:now_to_secs(Timestamp)}
     ]),
     %% ekaf:produce_async(ProduceTopic, Json),
-    ekaf:produce_async(ProduceTopic, Payload),
+    ekaf:produce_async(Topic, Payload),
     {ok, Message}.
 
 
